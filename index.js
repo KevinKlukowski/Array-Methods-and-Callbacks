@@ -96,8 +96,8 @@ function getAverageGoals(data) {
    const homeavg = data.reduce(function(accumulator, item) {
        return accumulator + item['Home Team Goals'] + item['Away Team Goals'];
    }, 0);
-   
-   return homeavg / data.length 
+   let ans = homeavg / data.length;
+   return ans.toFixed(2); 
 }
 console.log(getAverageGoals(fifaData));
 
